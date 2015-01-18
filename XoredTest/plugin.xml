@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.debug.core.launchConfigurationTypes">
+      <launchConfigurationType
+            id="com.odinokova.xoredtest.compositeConfigurationType"
+            name="Composite"
+            modes="run, debug"
+            delegate="com.odinokova.xoredtest.configurationtypes.CompositeConfigurationType">
+      </launchConfigurationType>
+   </extension>
+   <extension
+         point="org.eclipse.debug.ui.launchConfigurationTabGroups">
+      <launchConfigurationTabGroup
+            class="com.odinokova.xoredtest.ui.CompositeConfigurationTabGroup"
+            id="com.odinokova.xoredtest.ui.compositeConfigurationTabGroup"
+            type="com.odinokova.xoredtest.compositeConfigurationType">
+      </launchConfigurationTabGroup>
+   </extension>
+   <extension
+         point="org.eclipse.debug.ui.launchConfigurationTypeImages">
+      <launchConfigurationTypeImage
+            configTypeID="com.odinokova.xoredtest.compositeConfigurationType"
+            icon="icons/composite-icon.png"
+            id="com.odinokova.xoredtest.ui.compositeConfigurationTypeImage">
+      </launchConfigurationTypeImage>
+   </extension>
+</plugin>
